@@ -1,5 +1,5 @@
 <?php 
-include_once("config/url.php");
+include_once("../config/url.php");
 
 
 
@@ -16,3 +16,17 @@ include_once("config/url.php");
     <link rel="stylesheet" href="<?php $BASE_URL ?>css/styles.css">
 </head>
 <body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <a class="navbar-brand" href="<?php $BASE_URL?>index.php">
+                <img src="<?php $BASE_URL ?>img/logo.svg" alt="Logo do Sistema de Clientes" >
+                
+            </a>
+            <div>
+                <div class="navbar-nav">
+                    <a class="nav-link active" id="home-link" href="<?php $BASE_URL?>index.php">Agenda</a>
+                     <a class="nav-link active" id="home-link" href="<?php $BASE_URL?>create.php">Adicionar Contato</a>
+                </div>
+            </div>
+        </nav>
+    </header>
