@@ -16,7 +16,8 @@
                            <th scope="col">Nome</th> 
                            <th scope="col">Telefone</th>
                            <th scope="col">Valor a ser Pago</th>
-                           <th scope="col">Produtos</th>  
+                           <th scope="col">Produtos</th>
+                           <th scope="col">Observações</th>    
                            <th scope="col">#</th> 
                         </tr>
                     </thead>
@@ -26,9 +27,14 @@
                                 <td scope="row"><?= $contact['id'] ?></td>
                                 <td><?= $contact['name'] ?></td>
                                 <td><?= $contact['phone'] ?></td>
-                                <td>R$ <?= number_format($contact['price'], 2, ',', '.') ?></td>
+                                <td>R$ <?= isset($contact['AmountDue']) ? number_format($contact['AmountDue'], 2, ',', '.') : '0,00' ?></td>
                                 <td><?= $contact['products'] ?></td>
+                                <td><?=$contact['observation'] ?></td>
                                 <td class="actions">
+                                    <a href="#"><i class="fas fa-eye check-icon"></i></a>
+                                    <a href="#"><i class="far fa-edit edit-icon"></i></a>
+                                    <button type="submit"><i class="fas fa-times delete-icon"></i></button>
+                                </td>
                                 <?php endforeach; ?>
                     </tbody>
                 </table>
