@@ -20,6 +20,17 @@
                            <th scope="col">#</th> 
                         </tr>
                     </thead>
+                    <tbody>
+                        <?php foreach($contats as $contact): ?>
+                            <tr>
+                                <td scope="row"><?= $contact['id'] ?></td>
+                                <td><?= $contact['name'] ?></td>
+                                <td><?= $contact['phone'] ?></td>
+                                <td>R$ <?= number_format($contact['price'], 2, ',', '.') ?></td>
+                                <td><?= $contact['products'] ?></td>
+                                <td class="actions">
+                                <?php endforeach; ?>
+                    </tbody>
                 </table>
                 
             <?php else: ?>
