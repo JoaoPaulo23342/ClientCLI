@@ -44,6 +44,17 @@
 }
 .delete-icon {
     color: #BD2130;
+
+}
+.col-id {
+    font-weight: bold;
+    margin-right: 20px;
+    padding: 20px;
+}
+.delete-btn {
+    background-color: transparent;
+    border: none;
+    padding: 0;
 }
 
 #empty-list-text {
@@ -118,3 +129,5 @@
     text-align: center !important;
     vertical-align: middle !important;
 }
+
+

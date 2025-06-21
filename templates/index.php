@@ -18,22 +18,22 @@
                            <th scope="col">Valor a ser Pago</th>
                            <th scope="col">Produtos</th>
                            <th scope="col">Observações</th>    
-                           <th scope="col">#</th> 
+                           <th scope="col"></th> 
                         </tr>
                     </thead>
                     <tbody>
                         <?php foreach($contats as $contact): ?>
                             <tr>
-                                <td scope="row"><?= $contact['id'] ?></td>
+                                <td scope="row" class="col-id"><?= $contact['id'] ?></td>
                                 <td><?= $contact['name'] ?></td>
                                 <td><?= $contact['phone'] ?></td>
                                 <td>R$ <?= isset($contact['AmountDue']) ? number_format($contact['AmountDue'], 2, ',', '.') : '0,00' ?></td>
                                 <td><?= $contact['products'] ?></td>
                                 <td><?=$contact['observation'] ?></td>
                                 <td class="actions">
-                                    <a href="#"><i class="fas fa-eye check-icon"></i></a>
+                                    <a href="<?= $BASE_URL ?>show.php?id=<?= $contact['id'] ?>"><i class="fas fa-eye check-icon"></i></a>
                                     <a href="#"><i class="far fa-edit edit-icon"></i></a>
-                                    <button type="submit"><i class="fas fa-times delete-icon"></i></button>
+                                    <button type="submit" class="delete-btn"><i class="fas fa-times delete-icon"></i></button>
                                 </td>
                                 <?php endforeach; ?>
                     </tbody>
