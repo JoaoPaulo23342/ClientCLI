@@ -130,4 +130,35 @@
     vertical-align: middle !important;
 }
 
+/* SHOW / contato individual */
 
+#view-contact-container {
+    max-width: 500px;
+    margin: 0 auto;
+    
+}
+
+.bold {
+    font-weight: bold;
+
+}
+
+
+#back-link-container {
+    display: block;
+    width: 500px;
+    margin: 30px auto 0;
+    
+}
+#back-link {
+    text-decoration: none;
+    color: #007BFF;
+    font-size: 16px;
+    border: 1px solid #007BFF;
+    border-radius: 4px;
+    padding: 7px;
+}
+#back-link:hover {
+    background-color: #033365;
+    color: white;
+    }

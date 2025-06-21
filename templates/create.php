@@ -2,8 +2,10 @@
     include_once("header.php");
 
 ?>
-    <h1>Criando Contato</h1>
-    <i class="fas fa-eye"></i>
+    <div class="container">
+        <h1 id="main-title">Adicionar Cliente</h1>
+        
+    </div>
 <?php
     include_once("footer.php");
 ?>
