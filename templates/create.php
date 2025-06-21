@@ -5,7 +5,7 @@
     <div class="container">
     <?php include_once("backbtn.html"); ?>    
     <h1 id="main-title">Adicionar Cliente</h1>
-    <form action="<?= $BASE_URL ?>../config/process.php" method="POST">
+    <form id="create-form" action="<?= $BASE_URL ?>../config/process.php" method="POST">
         <input type="hidden" name="type" value="create">
         <div class="form-group">
             <label for="name">Nome do Cliente: </label>
@@ -29,11 +29,11 @@
         </div>
         <div class="form-group">
             <label for="products">Produtos: </label>
-            <input type="text" name="products" id="products" class="form-control" placeholder="Digite os produtos do cliente" required>
+            <textarea type="text" name="products" id="products" class="form-control" placeholder="Digite os produtos do cliente" required></textarea>
         </div>
         <div class="form-group">
             <label for="observation">Observações: </label>
-            <input type="text" name="observation" id="observation" class="form-control" placeholder="Digite as observações" required>
+            <input type="text" name="observation" id="observation" class="form-control" placeholder="Insira as observações" rows="10">
         </div>
         <button type="submit" class="btn btn-primary">Cadastrar</button>
         
