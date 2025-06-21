@@ -17,7 +17,7 @@
 /* HOME */
 
 #contacts-table {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
 
 }
@@ -25,6 +25,25 @@
 #contacts-table thead {
     color: white;
     background-color: #007BFF;
+}
+
+.actions {
+    text-align: right;
+    width: 150px;
+}
+.actions i {
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+.check-icon {
+    color: #1E7E34;
+}
+.edit-icon {
+    color: #007BFF;
+}
+.delete-icon {
+    color: #BD2130;
 }
 
 #empty-list-text {
@@ -41,7 +60,61 @@
     max-width: 500px;
     margin: 0 auto;
     margin-top: 30px;
-    
+
 }
 
 
+#contacts-table thead th {
+    background-color: #007BFF !important;
+    color: white !important;
+
+}
+#contacts-table td:nth-child(3), 
+#contacts-table td:nth-child(5)   {
+    text-align: center;
+    vertical-align: middle;
+}
+#contacts-table th:nth-child(3),
+#contacts-table th:nth-child(5) {
+    text-align: center;
+}
+#contacts-table td,
+#contacts-table th {
+    vertical-align: middle;
+}
+#contacts-table td:nth-child(4),
+#contacts-table td:nth-child(5), 
+#contacts-table th:nth-child(4),
+#contacts-table th:nth-child(5) {
+    text-align: center;
+    vertical-align: middle;
+}
+#contacts-table td:nth-child(6), 
+#contacts-table th:nth-child(6) {
+    text-align: left;
+    vertical-align: middle;
+    max-width: 250px;
+    word-wrap: break-word;
+    padding: 8px 10px;
+}
+#contacts-table td:nth-child(6),
+#contacts-table th:nth-child(6) {
+    text-align: left;
+    vertical-align: middle;
+    max-width: 250px;
+    min-width: 200px;
+    word-break: break-word;
+    white-space: pre-wrap;
+    padding: 10px 12px;
+    font-size: 14px;
+}
+#contacts-table th:nth-child(6),
+#contacts-table td:nth-child(6) {
+    text-align: center;
+    vertical-align: middle;
+}
+#contacts-table th:nth-child(6),
+#contacts-table td:nth-child(6) {
+    text-align: center !important;
+    vertical-align: middle !important;
+}
