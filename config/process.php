@@ -34,7 +34,38 @@ if(!empty($data)) {
             echo "Erro: " . $error;
             exit;
         }
-    }
+    } else if ($data['type'] === 'edit') {
+        $id = $data['id'];
+        $name = $data['name'];
+        $amount = $data['amountDue'];
+        $phone = $data['phone'];
+        $cpf = $data['CPF'];
+        $adress = $data['Adress'];
+        $products = $data['products'];
+        $observation = $data['observation'];
+
+        $query = "UPDATE contacts SET name = :name, phone = :phone, CPF = :CPF, adress = :Adress, products = :products, observation = :observation, AmountDue = :amountDue WHERE id = :id";
+        $stmt = $conn->prepare($query);
+        $stmt->bindParam(':name', $name);
+        $stmt->bindParam(':phone', $phone);
+        $stmt->bindParam(':CPF', $cpf);
+        $stmt->bindParam(':Adress', $adress);
+        $stmt->bindParam(':products', $products);
+        $stmt->bindParam(':observation', $observation);
+        $stmt->bindParam(':amountDue', $amount);
+        $stmt->bindParam(':id', $id);
+
+        try {
+            if($stmt->execute()) {
+                $_SESSION['msg'] = "Contato atualizado com sucesso!";
+                header("Location:". $BASE_URL . "../templates/index.php?showMsg=1");
+                exit;
+            }
+        } catch (PDOException $e) {
+            echo "Erro: " . $e->getMessage();
+            exit;
+        }
+    } 
     header("Location:". $BASE_URL . "../templates/index.php");
 } else {
     $id = null;
