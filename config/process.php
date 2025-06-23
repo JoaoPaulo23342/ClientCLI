@@ -30,7 +30,7 @@
         try {
             $stmt->execute();
             $_SESSION['msg'] = "Contato adicionado com sucesso!";
-            
+
     }   catch (PDOException $e) {
         $error = $e->getMessage();
         echo "Erro: " . $error;
@@ -38,6 +38,7 @@
 }
         
      }
+      header("Location:". $BASE_URL . "../templates/index.php");
  } else {
     $id;
     if(!empty($_GET)) {
@@ -61,5 +62,7 @@
  }
 
 
+// fechar conexão
 
+$conn = null;
 
