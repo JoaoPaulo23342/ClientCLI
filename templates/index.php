@@ -15,7 +15,7 @@ include_once("header.php");
     <table class="table" id="contacts-table">
         <thead>
             <tr>
-                <th scope="col">#</th>
+                <th scope="col"><i class="fa-sharp-duotone fa-solid fa-circle-user"></i></th>
                 <th scope="col">Nome</th> 
                 <th scope="col">Telefone</th>
                 <th scope="col">Valor a ser Pago</th>
@@ -35,7 +35,7 @@ include_once("header.php");
                     <td><?= $contact['observation'] ?></td>
                     <td class="actions">
                         <a href="<?= $BASE_URL ?>show.php?id=<?= $contact['id'] ?>"><i class="fas fa-eye check-icon"></i></a>
-                        <a href="#"><i class="far fa-edit edit-icon"></i></a>
+                        <a href="<?= $BASE_URL ?>edit.php?id=<?= $contact['id'] ?>"><i class="far fa-edit edit-icon"></i></a>
                         <button type="submit" class="delete-btn"><i class="fas fa-times delete-icon"></i></button>
                     </td>
                 </tr>

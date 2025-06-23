@@ -4,6 +4,7 @@
 
 <div class="container" id="view-contact-container">
     <?php include_once("backbtn.html"); ?>
+    
     <h1 id="main-title"><?= $contact['name'] ?></h1>
     
     <div class="contact-detail">
