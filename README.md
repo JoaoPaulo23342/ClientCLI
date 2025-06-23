@@ -22,7 +22,7 @@ Bem-vindo ao **ClientCLI**, um sistema simples para gerenciamento de Clientes.
 
 1. Clone este repositório:
     ```bash
-    git clone https://github.com/seu-usuario/Agenda.git
+    git clone https://github.com/JoaoPaulo23342/ClientCLI.git
     ```
 2. Copie a pasta para o diretório `htdocs` do XAMPP.
 3. Importe o banco de dados `agenda.sql` para o MySQL.
