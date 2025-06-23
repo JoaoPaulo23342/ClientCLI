@@ -65,7 +65,23 @@ if(!empty($data)) {
             echo "Erro: " . $e->getMessage();
             exit;
         }
-    } 
+    } else if ($data['type'] === 'delete') {
+        $id = $data['id'];
+        $query = "DELETE FROM contacts WHERE id = :id";
+        $stmt = $conn->prepare($query);
+        $stmt->bindParam(':id', $id);
+
+        try {
+            if($stmt->execute()) {
+                $_SESSION['msg'] = "Contato removido com sucesso!";
+                header("Location:". $BASE_URL . "../templates/index.php?showMsg=1");
+                exit;
+            }
+        } catch (PDOException $e) {
+            echo "Erro: " . $e->getMessage();
+            exit;
+        }
+    }
     header("Location:". $BASE_URL . "../templates/index.php");
 } else {
     $id = null;

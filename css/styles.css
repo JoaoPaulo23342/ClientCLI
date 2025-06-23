@@ -250,7 +250,9 @@
     padding-bottom: 15px;
     border-bottom: 2px solid #007BFF;
 }
-
+.delete-form {
+    display: inline;
+}
 .contact-detail {
     margin-bottom: 25px;
     padding: 15px;
@@ -313,4 +315,29 @@
     #home-link {
         display: none;
     }
+}
+
+/* Remove underscores e alinha ícones perfeitamente */
+.actions a, 
+.actions .delete-btn {
+    text-decoration: none !important; /* Remove sublinhados */
+    border-bottom: none !important; /* Remove bordas inferiores */
+    display: inline-flex; /* Alinhamento perfeito */
+    align-items: center;
+    justify-content: center;
+    padding: 5px; /* Espaçamento opcional */
+    color: inherit; /* Mantém as cores dos ícones */
+}
+
+.actions a:hover, 
+.actions .delete-btn:hover {
+    background-color: rgba(0,0,0,0.05); /* Efeito hover sutil */
+    border-radius: 3px;
+}
+
+/* Garante que o formulário não cause problemas */
+.delete-form {
+    display: inline;
+    margin: 0;
+    padding: 0;
 }
