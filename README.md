@@ -38,4 +38,4 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar
 Este projeto está licenciado sob a [MIT License](LICENSE).
 
 ---
-Feito com ❤️ por [Seu Nome]
+Feito por João Paulo
